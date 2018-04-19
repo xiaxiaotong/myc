@@ -1,0 +1,48 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+ext {
+    //Android
+    android = [
+            BuildToolsVersion: '25.0.0',
+            CompileSdkVersion: 25,
+            MinSdkVersion    : 19,
+            TargetSdkVersion : 22,
+            versionCode      : 205,
+            versionName      : '1.0.6',
+            /*当你改变实体或者数据的结构时，这个值应该增加*/
+            dbVersion        : 3
+    ]
+    depsVersion = [
+            support             : '25.0.0',
+            retrofit            : '2.1.0',
+            butterKnife         : '8.4.0',
+            glide               : '3.7.0',
+            multidex            : '1.0.1',
+            greendao            : '3.2.0',
+            sqlcipher           : '3.5.7@aar',
+            exoplayer_version   : '2.7.0',
+    ]
+    deps = [
+            // ------------- Android -------------
+            multidex                : "com.android.support:multidex:${depsVersion.multidex}",
+            leanback                : "com.android.support:leanback-v17:${depsVersion.support}",
+            supportV4               : "com.android.support:support-v4:${depsVersion.support}",
+            supportV7               : "com.android.support:appcompat-v7:${depsVersion.support}",
+            recyclerviewV7          : "com.android.support:recyclerview-v7:${depsVersion.support}",
+            design                  : "com.android.support:design:${depsVersion.support}",
+            // ------------- Three Parts -------------
+            butterknife             : "com.jakewharton:butterknife:${depsVersion.butterKnife}",
+            butterknifeCompiler     : "com.jakewharton:butterknife-compiler:${depsVersion.butterKnife}",
+            glide                   : "com.github.bumptech.glide:glide:${depsVersion.glide}",
+            greenDao                : "org.greenrobot:greendao:${depsVersion.greendao}",
+            sqlcipher               : "net.zetetic:android-database-sqlcipher:${depsVersion.sqlcipher}",
+            rxjava                  : 'io.reactivex.rxjava2:rxjava:2.1.2',
+            rxandroid               : 'io.reactivex.rxjava2:rxandroid:2.0.1',
+            rxlifecycle             : 'com.trello.rxlifecycle2:rxlifecycle:2.2.1',
+            rxlifecycle_components  : 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1',
+            retrofit                : 'com.squareup.retrofit2:retrofit:2.1.0',
+            retrofit_convert_gson   : 'com.squareup.retrofit2:converter-gson:2.1.0',
+            retrofit_rxjava_adapter : 'com.squareup.retrofit2:adapter-rxjava2:2.3.0',
+            GSON                    : 'com.google.code.gson:gson:2.8.0',
+    ]
+}
